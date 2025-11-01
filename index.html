@@ -28,7 +28,7 @@
     <!-- Player 1 part start  -->
       <div class="max-w-[1170px] mx-auto bg-white w-[800px] h-[600px] mt-[150px] text-center hidden" id="playerOneDiv">
         <h2 class="text-center font-pop text-[48px] font-bold pt-[150px] mb-5" id="playerOneName">Player - 1</h2>
-        <input type="text" id="inputNum" placeholder="Give a number from 1 to 10">
+        <input type="number" id="inputNum" placeholder="Give a number from 1 to 10">
         <button class="py-3 px-[50px] bg-[#7041D3] text-[#ffffff] block rounded-[30px] text-[18px] font-pop font-bold cursor-pointer mx-auto hover:bg-[#D9D9D9] hover:text-[black] duration-500" id="playerOneBtn">Let’s Play</button>
         <p id="errorMsgTwo"></p>
      </div>
@@ -46,9 +46,8 @@
     <!-- Player 2 Number Guessing part start  -->
      <div class="max-w-[1170px] mx-auto bg-white w-[800px] h-[600px] mt-[150px] text-center hidden" id="numGuessDiv">
         <h2 class="text-center font-pop text-[48px] font-bold pt-[150px] mb-5" id="playerTwoName">Player - 2</h2>
-        <h5 class="text-center font-pop text-[16px] font-bold mb-3">Chance - 5</h5>
-        <input type="text" id="inputNum" placeholder="Guess a number">
-        <button class="py-3 px-[50px] bg-[#7041D3] text-[#ffffff] block rounded-[30px] text-[18px] font-pop font-bold cursor-pointer mx-auto hover:bg-[#D9D9D9] hover:text-[black] duration-500" id="playerOneBtn">Guess</button>
+        <input type="number" id="inputNumTwo" placeholder="Guess a number">
+        <button class="py-3 px-[50px] bg-[#7041D3] text-[#ffffff] block rounded-[30px] text-[18px] font-pop font-bold cursor-pointer mx-auto hover:bg-[#D9D9D9] hover:text-[black] duration-500" id="guessBtn">Guess</button>
         <p id="errorMsgFour"></p>
      </div>
     <!-- Player 2 Number Guessing part End -->

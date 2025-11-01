@@ -7,11 +7,11 @@ let playerOneName = document.getElementById("playerOneName");
 let playerOneBtn = document.getElementById("playerOneBtn");
 let inputNum = document.getElementById("inputNum");
 let errorMsgTwo = document.getElementById("errorMsgTwo");
-let playerTwoName = document.getElementById("playerTwoName");
+let inputNameTwo = document.getElementById("inputNameTwo");
 let playerTwoDiv = document.getElementById("playerTwoDiv");
 let playerTwoBtn = document.getElementById("playerTwoBtn");
 let errorMsgThree = document.getElementById("errorMsgThree");
-let numGuessDiv = document.getElementById("numGuessDiv");
+
 let errorMsgFour = document.getElementById("errorMsgFour");
 let playerTwo = document.getElementById("playerTwo");
 
@@ -19,7 +19,7 @@ let playerTwo = document.getElementById("playerTwo");
 startBtn.addEventListener("click", () => {
   let nameValue = inputName.value;
   if (nameValue == "") {
-    nameErrorMsg = "Name Is Missing";
+    let nameErrorMsg = "Name Is Missing";
     errorMsg.innerText = nameErrorMsg;
     errorMsg.style.color = "#ffffff";
     errorMsg.style.background = "#CC3030";
@@ -39,13 +39,13 @@ startBtn.addEventListener("click", () => {
   }
 });
 // ================>
+let playerOneNum;
 playerOneBtn.addEventListener("click", () => {
-  let playerOneNum = Number(inputNum.value);
-  //let userOneNum = Number(playerOneNum);
-  console.log(typeof playerOneNum);
+   playerOneNum = Number(inputNum.value);
 
-  if (playerOneNum == "") {
-    numErrorMsg = "Please give a number";
+
+  if (inputNum.value == "") {
+   let numErrorMsg = "Please give a number";
     errorMsgTwo.innerText = numErrorMsg;
     errorMsgTwo.style.color = "#ffffff";
     errorMsgTwo.style.background = "#CC3030";
@@ -57,7 +57,7 @@ playerOneBtn.addEventListener("click", () => {
     errorMsgTwo.style.display = "inline-block";
     inputNum.value = "";
   } else if (playerOneNum < 1 || playerOneNum > 10) {
-    numErrorMsg = "Please give a Value between 1 to 10";
+    let numErrorMsg = "Please give a Value between 1 to 10";
     errorMsgTwo.innerText = numErrorMsg;
     errorMsgTwo.style.color = "#ffffff";
     errorMsgTwo.style.background = "#CC3030";
@@ -79,7 +79,7 @@ playerOneBtn.addEventListener("click", () => {
 playerTwoBtn.addEventListener("click", () => {
   let playerTwoInput = inputNameTwo.value;
   if (playerTwoInput == "") {
-    nameErrorMsgTwo = "Name Is Missing";
+    let nameErrorMsgTwo = "Name Is Missing";
     errorMsgThree.innerText = nameErrorMsgTwo;
     errorMsgThree.style.color = "#ffffff";
     errorMsgThree.style.background = "#CC3030";
@@ -99,3 +99,9 @@ playerTwoBtn.addEventListener("click", () => {
   }
 });
 // ===================>
+let numGuessDiv = document.getElementById("numGuessDiv");
+let playerTwoName = document.getElementById("playerTwoName");
+let inputNumTwo = document.getElementById("inputNumTwo");
+let guessBtn = document.getElementById("guessBtn");
+
+
