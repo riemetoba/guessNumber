@@ -105,3 +105,33 @@ let inputNumTwo = document.getElementById("inputNumTwo");
 let guessBtn = document.getElementById("guessBtn");
 
 
+guessBtn.addEventListener("click", () => {
+  let guessValue = Number(inputNumTwo.value);
+  // let playerOneNum = Number(inputNum.value)
+     if (guessValue === playerOneNum) {
+   let winningMsg = "congrats! You Win!";
+    errorMsgFour.innerText = winningMsg;
+    errorMsgFour.style.color = "#ffffff";
+    errorMsgFour.style.background = "green";
+    errorMsgFour.style.fontSize = "42px";
+    errorMsgFour.style.fontWeight = "600";
+    errorMsgFour.style.marginTop = "15px";
+    errorMsgFour.style.padding = "10px 80px";
+    errorMsgFour.style.borderRadius = "10px";
+    errorMsgFour.style.display = "inline-block";
+    inputNumTwo.value = "";
+  } else {
+    let tryWarning = "Wrong Guess! Try Again.";
+    errorMsgFour.innerText = tryWarning;
+    errorMsgFour.style.color = "#ffffff";
+    errorMsgFour.style.background = "#CC3030";
+    errorMsgFour.style.fontSize = "42px";
+    errorMsgFour.style.fontWeight = "600";
+    errorMsgFour.style.marginTop = "15px";
+    errorMsgFour.style.padding = "10px 80px";
+    errorMsgFour.style.borderRadius = "10px";
+    errorMsgFour.style.display = "inline-block";
+    inputNumTwo.value = "";
+    playerTwoName.innerText = playerTwoInput;
+  }
+});
